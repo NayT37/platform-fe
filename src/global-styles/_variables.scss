@@ -1,0 +1,41 @@
+/// INDEX
+//  + Breakpoints
+//  + Colors
+//  + Fonts
+//      + Fonts : Weights
+//  + Z-index
+//  + Others
+
+//------------------------------
+//  + Breakpoints
+$breakpoint-xsm: 480px;
+$breakpoint-sm: 600px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 960px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1800px;
+$container-width: 1400px;
+
+//  + Colors
+$default: #9D9BB6;
+$blue: #0552D8;
+$orange: #FE9B00;
+$white-alt: #F5F5FB;
+$dark-blue: #1A2D7D;
+$yellow: #FFDA60;
+$gray: #9C9AB5;
+
+//  + Fonts
+$f-gilroy: "Gilroy", "Gotham", serif;
+$f-nunito: "Nunito", serif;
+//      + Fonts : Weights
+$w-black: 900;
+$w-bold: 600;
+$w-regular: 400;
+$w-light: 300;
+
+//  + Z-index
+$z-header: 998;
+$z-footer: $z-header;
+$z-floating: 997;
+$z-modal: 999;

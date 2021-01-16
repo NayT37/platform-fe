@@ -1,0 +1,101 @@
+@import "./variables";
+/// INDEX
+//  + Headings
+//  + Font Face
+//      + Font Face : Nunito
+//      + Font Face : Gilroy
+//  [ Responsive ]
+
+//------------------------------
+//  + Headings
+h1,
+.h1 {
+    font-family: $f-gilroy;
+    font-size: 45px;
+    font-weight: $w-bold;
+    line-height: 56px;
+}
+h2,
+.h2 {
+    font-family: $f-gilroy;
+    font-size: 40px;
+    font-weight: $w-bold;
+    line-height: 48px;
+}
+h3,
+.h3 {
+    font-family: $f-gilroy;
+    font-size: 30px;
+    font-weight: $w-bold;
+    line-height: 36px;
+}
+h4,
+.h4 {
+    font-family: $f-gilroy;
+    font-size: 18px;
+    font-weight: $w-bold;
+    line-height: 22px;
+}
+h5,
+.h5 {
+    font-family: $f-gilroy;
+    font-size: 17px;
+    font-weight: $w-bold;
+    line-height: 18;
+}
+h6,
+.h6 {
+    font-family: $f-gilroy;
+    font-size: 15px;
+    font-weight: $w-bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+//  + Font Face
+//      + Font Face : Nunito
+@font-face {
+    font-family: "Nunito";
+    src: url("../utils/fonts/Nunito-ExtraLight.ttf") format("truetype");
+    font-weight: 100;
+}
+@font-face {
+    font-family: "Nunito";
+    src: url("../utils/fonts/Nunito-Light.ttf") format("truetype");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Nunito";
+    src: url("../utils/fonts/Nunito-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Nunito";
+    src: url("../utils/fonts/Nunito-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../utils/fonts/Nunito-Black.ttf") format("truetype");
+    font-weight: 900;
+}
+
+//      + Font Face : Gilroy
+@font-face {
+    font-family: "Gilroy";
+    src: url("../utils/fonts/Gilroy-Light.otf") format("opentype");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Gilroy";
+    src: url("../utils/fonts/Gilroy-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Gilroy";
+    src: url("../utils/fonts/Gilroy-ExtraBold.otf") format("opentype");
+    font-weight: 600;
+}
+
+//  [ Responsive ]
