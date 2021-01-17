@@ -1,1 +1,404 @@
-@import '../../../global-styles/variables';
+@import "../../../global-styles/variables";
+
+/// INDEX
+//  + General
+//  + Header
+//  + Events
+//      + Events : Recets
+//  + Activity
+//      + Activity : Accordion
+//  + Progress
+//  [ Responsive ]
+
+//------------------------------
+
+.home {
+    padding: 22px 0 48px 55px;
+    background-color: $gray-bg;
+    min-height: 100vh;
+}
+.home__title {
+    color: $dark-blue-title;
+    font-weight: $w-regular;
+}
+
+//  + Header
+.home__header {
+    margin-bottom: 33px;
+}
+.home__header__row {
+    display: flex;
+    align-items: center;
+}
+.home__header__banner {
+    position: relative;
+    margin-top: 15px;
+    padding: 0 22px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    border-radius: 12px;
+}
+.home__header__banner__fig {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 225px;
+    width: 20%;
+}
+.home__header__banner__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    color: $white;
+}
+.home__header__banner__content__title {
+    margin-bottom: 10px;
+    font-family: $f-gotham;
+    font-weight: $w-regular;
+}
+.home__header__banner__content__sub-title {
+    font-family: $f-nunito;
+    font-size: 18px;
+    font-weight: $w-bold;
+}
+
+//  + Events
+.home__events {
+    margin-bottom: 35px;
+}
+.home__events__row {
+    &--swiper {
+        position: relative;
+    }
+}
+.home__events__swiper__slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: $white;
+    padding: 100px 20px 90px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 11px;
+}
+.home__events__swiper__slide__title {
+    font-weight: $w-regular;
+    max-width: 275px;
+}
+.home__events__swiper__slide__date {
+    font-weight: $w-regular;
+}
+.home__events__swiper__slide__tag {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 11px;
+    font-weight: $w-bold;
+    text-transform: uppercase;
+    padding: 4px 20px;
+    background-color: $blue-alt;
+    border-radius: 15px;
+}
+.home__events__swiper__paginator {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    height: 10px;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+    z-index: 2;
+    .swiper-pagination-bullet {
+        background-color: $white;
+        opacity: 0.6;
+        margin-right: 9px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &-active {
+            opacity: 1;
+        }
+    }
+}
+.home__events__swiper__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: hidden;
+    z-index: 2;
+    &--prev {
+        left: 10px;
+    }
+    &--next {
+        right: 10px;
+    }
+}
+//      + Events : Recets
+.home__events__recent__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    &::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: $gray-line;
+    }
+}
+.home__events__recent__header__title {
+    font-weight: $w-bold;
+    flex-shrink: 0;
+    padding-right: 15px;
+}
+.home__events__recent__card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 16px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.home__events__recent__card__fig {
+    max-width: 62px;
+}
+.home__events__recent__card__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 20px;
+}
+.home__events__recent__card__content__hour {
+    width: 100%;
+    font-family: $f-gilroy;
+    font-size: 16px;
+    font-weight: $w-bold;
+}
+.home__events__recent__card__content__title {
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $dark-blue-title;
+}
+
+//  + Activity
+.home__activity {
+    margin-bottom: 36px;
+}
+.home__activity__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+.home__activity__header__title {
+    flex-shrink: 0;
+}
+.home__activity__header__line {
+    width: 85%;
+    margin: 0 15px;
+    height: 2px;
+    background-color: $gray-line;
+}
+.home__activity__header__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 8px 16px;
+    color: $dark-blue-alt;
+    background-color: rgba($default, 0.17);
+}
+
+//      + Activity : Accordion
+.home__activity__acc.MuiAccordion-root {
+    margin-bottom: 14px;
+    color: inherit;
+    font-family: $f-nunito;
+    border-radius: 4px;
+    box-shadow: 0 22px 34px 0 rgba(27, 20, 119, 0.02);
+    &::before {
+        display: none;
+    }
+    &.Mui-expanded {
+        margin-bottom: 16px;
+        box-shadow: 0 22px 34px 0 rgba(27, 20, 119, 0.11);
+    }
+}
+.home__activity__acc__head {
+    .MuiAccordionSummary-content {
+        display: flex;
+        align-items: center;
+    }
+    .MuiIconButton-label {
+        max-width: 15px;
+    }
+}
+.home__activity__acc__head__fig {
+    max-width: 41px;
+    margin-right: 16px;
+}
+.home__activity__acc__head__title {
+    font-family: $f-nunito;
+    font-size: 16px;
+    font-weight: $w-regular;
+    strong {
+        font-weight: $w-bold;
+        color: $blue-alt;
+    }
+}
+.home__activity__acc__content {
+    color: $dark-blue-title;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+//  + Progress
+.home__progress__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 22px 36px 60px;
+    color: $white;
+    background-color: $dark-blue;
+    border-radius: 7px;
+    box-shadow: 6px 32px 45px 0 rgba(36, 53, 157, 0.13);
+}
+.home__progress__box__title {
+    width: 100%;
+    margin-bottom: 28px;
+    text-align: center;
+}
+.home__progress__box__data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.home__progress__box__data__p-bar {
+    max-width: 160px;
+    margin-bottom: 18px;
+    .CircularProgressbar-text {
+        fill: $white;
+        font-family: $f-gilroy;
+        font-size: 30px;
+        font-weight: $w-bold;
+    }
+    .CircularProgressbar-trail {
+        stroke: $orange-circle;
+    }
+    .CircularProgressbar-path {
+        stroke: $yellow-circle;
+    }
+}
+.home__progress__box__data__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 24px;
+    background-color: rgba($gray-overlay, 0.13);
+    border-radius: 20px;
+    &::before {
+        display: none;
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 1px;
+        height: 40%;
+        transform: translate(-50%, -50%);
+        background-color: $white;
+    }
+}
+.data__wrapper__stats {
+    font-family: $f-gilroy;
+    font-weight: $w-bold;
+    &--complete {
+        .data__wrapper__stats__title {
+            &::before {
+                background-color: $yellow-circle;
+            }
+        }
+    }
+    &--to-go {
+        .data__wrapper__stats__title {
+            &::before {
+                background-color: $orange-circle;
+            }
+        }
+    }
+}
+.data__wrapper__stats__title {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    &::before {
+        content: "";
+        position: relative;
+
+        height: 13px;
+        width: 13px;
+        margin-right: 6px;
+        border-radius: 50%;
+    }
+}
+.data__wrapper__stats__info {
+    font-size: 24px;
+    .em {
+        font-size: 45px;
+    }
+}
+//------------------------------
+
+//  [ Responsive ]
+// 768px
+@media (min-width: $breakpoint-md) {
+    //  + General
+    //  + Header
+    .home__header__banner__fig {
+        display: block;
+    }
+    .home__header__banner__content {
+        margin-left: 21%;
+    }
+    //  + Events
+    .home__events__swiper__slide {
+        padding: 100px 80px 90px;
+    }
+    .home__events__swiper__btn {
+        visibility: visible;
+    }
+    //      + Events : Recets
+    //  + Activity
+    //      + Activity : Accordion
+    //  + Progress
+    .home__progress__box__data__wrapper {
+        flex-direction: row;
+        &::before {
+            display: block;
+        }
+    }
+}
+
+// 1200px
+@media (min-width: $breakpoint-xl) {
+    //  + General
+    //  + Header
+    //  + Events
+    .home__events__swiper__slide {
+        padding: 100px 90px 90px;
+    }
+    //      + Events : Recets
+    //  + Activity
+    //      + Activity : Accordion
+    //  + Progress
+}
