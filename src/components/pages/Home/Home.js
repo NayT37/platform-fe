@@ -1,5 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 // Components
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import {Heading} from '../../atoms/Heading/Heading';
@@ -7,17 +11,26 @@ import {LearningStatus} from '../../molecules/LearningStatus/LearningStatus';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {SwiperButton} from '../../atoms/SwiperButton/SwiperButton';
 import SwiperCore, {Navigation, Pagination} from 'swiper';
+
 // Resources
 import './Home.scss';
-import lrngIcon from '../../../utils/img/english.png';
+import arrow from '../../../utils/img/arrow-down.png';
 import bannerBG from '../../../utils/img/banner-bg.png';
 import bannerImg from '../../../utils/img/banner-img.png';
 import eventIcon from '../../../utils/img/recent-event.png';
+import {IoArrowForwardOutline} from 'react-icons/io5';
+import lrngIcon from '../../../utils/img/english.png';
 import swiperBG from '../../../utils/img/slider.png';
+
+import accordionIcon_1 from '../../../utils/img/acc-1.png';
+import accordionIcon_2 from '../../../utils/img/acc-2.png';
+import accordionIcon_3 from '../../../utils/img/acc-3.png';
 
 SwiperCore.use([Navigation, Pagination]);
 
 export const Home = () => {
+  const [expanded, setExpanded] = useState(false);
+
   const learningData = {icon: lrngIcon, subject: 'English'};
   const sliderData = [
     {title: 'Youth Talent & Education', date: 'May, 20', tag: 'science'},
@@ -28,6 +41,14 @@ export const Home = () => {
     {icon: eventIcon, hour: '10:30AM', title: 'Webinar the basics of English'},
     {icon: eventIcon, hour: '10:30AM', title: 'Team Building Activity 🔥'},
   ];
+
+  /**
+   * Method for controlled accordion group
+   * @param {any} panel : Panel controlled
+   */
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   return (
     <div className="page home">
@@ -121,6 +142,69 @@ export const Home = () => {
             </Grid>
           </Grid>
         </div>
+
+        {/* Activity */}
+        <div className="home__activity">
+          <div className="home__activity__header">
+            <Heading className="home__activity__header__title home__title" headLevel={3}>
+              Activity
+            </Heading>
+            <div className="home__activity__header__line"></div>
+            <button className="home__activity__header__btn">
+              <IoArrowForwardOutline size="15px" />
+            </button>
+          </div>
+          <Accordion className="home__activity__acc" expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            <AccordionSummary className="home__activity__acc__head" expandIcon={<img src={arrow} alt="Dropdown" />}>
+              <img className="home__activity__acc__head__fig" src={accordionIcon_1} alt="Followers" />{' '}
+              <Heading headLevel={4} className="home__activity__acc__head__title">
+                You have new 5 followers including <strong>Kathryn Crawford</strong> and <strong>Piper Shaw</strong>
+              </Heading>
+            </AccordionSummary>
+            <AccordionDetails>
+              <p className="home__activity__acc__content">
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+              </p>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion className="home__activity__acc" expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+            <AccordionSummary className="home__activity__acc__head" expandIcon={<img src={arrow} alt="Dropdown" />}>
+              <img className="home__activity__acc__head__fig" src={accordionIcon_2} alt="Followers" />
+              <Heading headLevel={4} className="home__activity__acc__head__title">
+                3 new events were added to your calendar
+              </Heading>
+            </AccordionSummary>
+            <AccordionDetails>
+              <p className="home__activity__acc__content">
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+              </p>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion className="home__activity__acc" expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+            <AccordionSummary className="home__activity__acc__head" expandIcon={<img src={arrow} alt="Dropdown" />}>
+              <img className="home__activity__acc__head__fig" src={accordionIcon_3} alt="Followers" />{' '}
+              <Heading headLevel={4} className="home__activity__acc__head__title">
+                You have 3 pending readings to complete 🤓
+              </Heading>
+            </AccordionSummary>
+            <AccordionDetails>
+              <p className="home__activity__acc__content">
+                is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+              </p>
+            </AccordionDetails>
+          </Accordion>
+        </div>
+
+        {/* End */}
       </Container>
     </div>
   );

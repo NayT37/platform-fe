@@ -5,12 +5,14 @@
 //  + Header
 //  + Events
 //      + Events : Recets
+//  + Activity
+//      + Activity : Accordion
 //  [ Responsive ]
 
 //------------------------------
 
 .home {
-    padding: 22px 0 0 55px;
+    padding: 22px 0 48px 55px;
     background-color: $gray-bg;
     min-height: 100vh;
 }
@@ -63,6 +65,9 @@
 }
 
 //  + Events
+.home__events {
+    margin-bottom: 35px;
+}
 .home__events__row {
     &--swiper {
         position: relative;
@@ -182,6 +187,78 @@
     color: $dark-blue-title;
 }
 
+//  + Activity
+.home__activity {
+    margin-bottom: 36px;
+}
+.home__activity__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+.home__activity__header__title {
+    flex-shrink: 0;
+}
+.home__activity__header__line {
+    width: 85%;
+    margin: 0 15px;
+    height: 2px;
+    background-color: $gray-line;
+}
+.home__activity__header__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 8px 16px;
+    color: $dark-blue-alt;
+    background-color: rgba($default, 0.17);
+}
+
+//      + Activity : Accordion
+.home__activity__acc.MuiAccordion-root {
+    margin-bottom: 14px;
+    color: inherit;
+    font-family: $f-nunito;
+    border-radius: 4px;
+    box-shadow: 0 22px 34px 0 rgba(27, 20, 119, 0.02);
+    &::before {
+        display: none;
+    }
+    &.Mui-expanded {
+        margin-bottom: 16px;
+        box-shadow: 0 22px 34px 0 rgba(27, 20, 119, 0.11);
+    }
+}
+.home__activity__acc__head {
+    .MuiAccordionSummary-content {
+        display: flex;
+        align-items: center;
+    }
+    .MuiIconButton-label {
+        max-width: 15px;
+    }
+}
+.home__activity__acc__head__fig {
+    max-width: 41px;
+    margin-right: 16px;
+}
+.home__activity__acc__head__title {
+    font-family: $f-nunito;
+    font-size: 16px;
+    font-weight: $w-regular;
+    strong {
+        font-weight: $w-bold;
+        color: $blue-alt;
+    }
+}
+.home__activity__acc__content {
+    color: $dark-blue-title;
+    font-size: 14px;
+    line-height: 25px;
+}
+
 //------------------------------
 
 //  [ Responsive ]
@@ -203,6 +280,8 @@
         visibility: visible;
     }
     //      + Events : Recets
+    //  + Activity
+    //      + Activity : Accordion
 }
 
 // 1200px
@@ -214,4 +293,6 @@
         padding: 100px 90px 90px;
     }
     //      + Events : Recets
+    //  + Activity
+    //      + Activity : Accordion
 }
