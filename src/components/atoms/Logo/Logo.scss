@@ -1,0 +1,15 @@
+@import "../../../global-styles/variables";
+
+.main-logo {
+    display: flex;
+    align-items: center;
+    max-width: 145px;
+}
+
+//  [ Responsive ]
+// 768px
+@media (min-width: $breakpoint-md) {
+    .main-logo {
+        max-width: 170px;
+    }
+}

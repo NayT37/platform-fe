@@ -4,7 +4,7 @@ import './Home.scss';
 
 export const Home = () => {
   return (
-    <div>
+    <div className="page">
       <Container>
         <h1>Home Works!</h1>
       </Container>

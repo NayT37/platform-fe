@@ -29,3 +29,18 @@ button {
         cursor: pointer;
     }
 }
+img {
+    width: 100%;
+    height: auto;
+}
+input {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    &:focus {
+        outline: 0;
+    }
+    &::placeholder {
+        color: inherit;
+    }
+}

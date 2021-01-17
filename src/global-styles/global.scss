@@ -1,5 +1,7 @@
 @import "./variables";
 /// INDEX
+//  + General
+//  + Pages
 //  + Headings
 //  + Font Face
 //      + Font Face : Nunito
@@ -7,6 +9,18 @@
 //  [ Responsive ]
 
 //------------------------------
+
+//  + General
+body {
+    font-family: $f-nunito;
+    color: $default;
+}
+
+//  + Pages
+.page {
+    padding-top: $header-height;
+}
+
 //  + Headings
 h1,
 .h1 {

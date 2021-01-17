@@ -17,13 +17,18 @@ $breakpoint-xxl: 1800px;
 $container-width: 1400px;
 
 //  + Colors
-$default: #9D9BB6;
-$blue: #0552D8;
-$orange: #FE9B00;
-$white-alt: #F5F5FB;
-$dark-blue: #1A2D7D;
-$yellow: #FFDA60;
-$gray: #9C9AB5;
+$default: #9d9bb6;
+$blue: #0552d8;
+$blue-alt: #3d84ff;
+$orange: #fe9b00;
+$white-alt: #f5f5fb;
+$dark-blue: #1a2d7d;
+$yellow: #ffda60;
+$gray: #9c9ab5;
+$white: #ffffff;
+$black: #000000;
+$gray-bg: #f5f5fb;
+$dark-blue-alt: #3e3a6f;
 
 //  + Fonts
 $f-gilroy: "Gilroy", "Gotham", serif;
@@ -39,3 +44,7 @@ $z-header: 998;
 $z-footer: $z-header;
 $z-floating: 997;
 $z-modal: 999;
+
+//  + Others
+$header-height: 80px;
+$transition: 0.3s ease-in-out;

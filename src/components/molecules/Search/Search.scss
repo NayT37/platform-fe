@@ -1,0 +1,17 @@
+@import "../../../global-styles/variables";
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 13px 15px;
+    background-color: $gray-bg;
+}
+.search__input {
+    flex-grow: 1;
+}
+.search__icon {
+    fill: $default;
+    flex-shrink: 0;
+}
