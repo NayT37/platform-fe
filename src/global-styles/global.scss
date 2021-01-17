@@ -16,6 +16,11 @@ body {
     font-family: $f-nunito;
     color: $default;
 }
+.plt-card {
+    background-color: $white;
+    border-radius: 11px;
+    box-shadow: 0 22px 34px 0 rgba(27, 20, 119, 0.02);
+}
 
 //  + Pages
 .page {
@@ -56,7 +61,7 @@ h5,
     font-family: $f-gotham;
     font-size: 17px;
     font-weight: $w-bold;
-    line-height: 18;
+    line-height: 18px;
 }
 h6,
 .h6 {
