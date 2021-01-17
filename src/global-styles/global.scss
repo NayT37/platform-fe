@@ -6,6 +6,7 @@
 //  + Font Face
 //      + Font Face : Nunito
 //      + Font Face : Gilroy
+//      + Font Face : Gotham
 //  [ Responsive ]
 
 //------------------------------
@@ -18,48 +19,48 @@ body {
 
 //  + Pages
 .page {
-    padding-top: $header-height;
+    margin-top: $header-height;
 }
 
 //  + Headings
 h1,
 .h1 {
-    font-family: $f-gilroy;
+    font-family: $f-gotham;
     font-size: 45px;
     font-weight: $w-bold;
     line-height: 56px;
 }
 h2,
 .h2 {
-    font-family: $f-gilroy;
+    font-family: $f-gotham;
     font-size: 40px;
     font-weight: $w-bold;
     line-height: 48px;
 }
 h3,
 .h3 {
-    font-family: $f-gilroy;
+    font-family: $f-gotham;
     font-size: 30px;
     font-weight: $w-bold;
     line-height: 36px;
 }
 h4,
 .h4 {
-    font-family: $f-gilroy;
+    font-family: $f-gotham;
     font-size: 18px;
     font-weight: $w-bold;
     line-height: 22px;
 }
 h5,
 .h5 {
-    font-family: $f-gilroy;
+    font-family: $f-gotham;
     font-size: 17px;
     font-weight: $w-bold;
     line-height: 18;
 }
 h6,
 .h6 {
-    font-family: $f-gilroy;
+    font-family: $f-gotham;
     font-size: 15px;
     font-weight: $w-bold;
     letter-spacing: 1px;
@@ -109,6 +110,23 @@ h6,
 @font-face {
     font-family: "Gilroy";
     src: url("../utils/fonts/Gilroy-ExtraBold.otf") format("opentype");
+    font-weight: 600;
+}
+
+//      + Font Face : Gotham
+@font-face {
+    font-family: "Gotham";
+    src: url("../utils/fonts/Gotham-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("../utils/fonts/Gotham-Medium.ttf") format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("../utils/fonts/Gotham-Bold.ttf") format("truetype");
     font-weight: 600;
 }
 
