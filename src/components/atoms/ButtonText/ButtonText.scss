@@ -1,0 +1,14 @@
+@import "../../../global-styles/variables";
+
+.plt-btn {
+    padding: 16px;
+    color: $white;
+    font-size: 13px;
+    font-weight: $w-bold;
+    background-color: $blue-alt;
+    border-radius: 17px;
+    transition: all $transition;
+    &:hover {
+        background-color: $orange;
+    }
+}
