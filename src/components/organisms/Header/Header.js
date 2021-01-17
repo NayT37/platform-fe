@@ -7,7 +7,7 @@ import {UserImg} from '../../molecules/UserImg/UserImg';
 import {ButtonText} from '../../atoms/ButtonText/ButtonText';
 import {ButtonLogo} from '../../atoms/ButtonLogo/ButtonLogo';
 import {AiFillMessage as MessageIcon} from 'react-icons/ai';
-import notificationIcon from '../../../utils/img/icon-notification.png';
+import notificationIcon from '../../../utils/img/icons/icon-notification.png';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false); // State for responsive menu
