@@ -1,1 +1,66 @@
-@import '../../../global-styles/variables';
+@import "../../../global-styles/variables";
+
+/// INDEX
+//  + General
+//  + Header
+//  [ Responsive ]
+
+//------------------------------
+
+.home {
+    padding: 22px 0 0 55px;
+    background-color: $gray-bg;
+    min-height: 100vh;
+}
+.home__title {
+    color: $dark-blue-title;
+}
+
+//  + Header
+.home__header__row {
+    display: flex;
+    align-items: center;
+}
+.home__header__banner {
+    position: relative;
+    margin-top: 15px;
+    padding: 0 22px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    border-radius: 12px;
+}
+.home__header__banner__fig {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 225px;
+    width: 20%;
+}
+.home__header__banner__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    color: $white;
+}
+.home__header__banner__content__title {
+    margin-bottom: 10px;
+    font-family: $f-gotham;
+    font-weight: $w-regular;
+}
+.home__header__banner__content__sub-title {
+    font-family: $f-nunito;
+    font-size: 18px;
+    font-weight: $w-bold;
+}
+// 768px
+@media (min-width: $breakpoint-md) {
+    .home__header__banner__fig {
+        display: block;
+    }
+    .home__header__banner__content {
+        margin-left: 21%;
+    }
+}
