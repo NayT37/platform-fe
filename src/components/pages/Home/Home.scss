@@ -7,6 +7,7 @@
 //      + Events : Recets
 //  + Activity
 //      + Activity : Accordion
+//  + Progress
 //  [ Responsive ]
 
 //------------------------------
@@ -259,6 +260,103 @@
     line-height: 25px;
 }
 
+//  + Progress
+.home__progress__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 22px 36px 60px;
+    color: $white;
+    background-color: $dark-blue;
+    border-radius: 7px;
+    box-shadow: 6px 32px 45px 0 rgba(36, 53, 157, 0.13);
+}
+.home__progress__box__title {
+    width: 100%;
+    margin-bottom: 28px;
+    text-align: center;
+}
+.home__progress__box__data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.home__progress__box__data__p-bar {
+    max-width: 160px;
+    margin-bottom: 18px;
+    .CircularProgressbar-text {
+        fill: $white;
+        font-family: $f-gilroy;
+        font-size: 30px;
+        font-weight: $w-bold;
+    }
+    .CircularProgressbar-trail {
+        stroke: $orange-circle;
+    }
+    .CircularProgressbar-path {
+        stroke: $yellow-circle;
+    }
+}
+.home__progress__box__data__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 24px;
+    background-color: rgba($gray-overlay, 0.13);
+    border-radius: 20px;
+    &::before {
+        display: none;
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 1px;
+        height: 40%;
+        transform: translate(-50%, -50%);
+        background-color: $white;
+    }
+}
+.data__wrapper__stats {
+    font-family: $f-gilroy;
+    font-weight: $w-bold;
+    &--complete {
+        .data__wrapper__stats__title {
+            &::before {
+                background-color: $yellow-circle;
+            }
+        }
+    }
+    &--to-go {
+        .data__wrapper__stats__title {
+            &::before {
+                background-color: $orange-circle;
+            }
+        }
+    }
+}
+.data__wrapper__stats__title {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    &::before {
+        content: "";
+        position: relative;
+
+        height: 13px;
+        width: 13px;
+        margin-right: 6px;
+        border-radius: 50%;
+    }
+}
+.data__wrapper__stats__info {
+    font-size: 24px;
+    .em {
+        font-size: 45px;
+    }
+}
 //------------------------------
 
 //  [ Responsive ]
@@ -282,6 +380,13 @@
     //      + Events : Recets
     //  + Activity
     //      + Activity : Accordion
+    //  + Progress
+    .home__progress__box__data__wrapper {
+        flex-direction: row;
+        &::before {
+            display: block;
+        }
+    }
 }
 
 // 1200px
@@ -295,4 +400,5 @@
     //      + Events : Recets
     //  + Activity
     //      + Activity : Accordion
+    //  + Progress
 }

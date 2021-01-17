@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
-
+import {CircularProgressbar} from 'react-circular-progressbar';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import {Heading} from '../../atoms/Heading/Heading';
@@ -202,6 +202,34 @@ export const Home = () => {
               </p>
             </AccordionDetails>
           </Accordion>
+        </div>
+
+        {/* Progress */}
+        <div className="home__progress">
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={4} className="home__progress__row">
+              <div className="home__progress__box">
+                <Heading className="home__progress__box__title">Progress Overview</Heading>
+                <div className="home__progress__box__data">
+                  <CircularProgressbar className="home__progress__box__data__p-bar" value={40} text={`${40}%`} />
+                  <div className="home__progress__box__data__wrapper">
+                    <div className="data__wrapper__stats data__wrapper__stats--complete">
+                      <div className="data__wrapper__stats__title">Completed</div>
+                      <p className="data__wrapper__stats__info">
+                        <span className="em">20</span> hours
+                      </p>
+                    </div>
+                    <div className="data__wrapper__stats data__wrapper__stats--to-go">
+                      <div className="data__wrapper__stats__title">Left to Go</div>
+                      <p className="data__wrapper__stats__info">
+                        <span className="em">30</span> hours
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Grid>
+          </Grid>
         </div>
 
         {/* End */}
