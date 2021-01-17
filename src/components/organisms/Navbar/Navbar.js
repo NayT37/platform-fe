@@ -19,7 +19,6 @@ export const Navbar = () => {
    */
   const handleSideMenu = (forceClose = false) => {
     forceClose === true ? setIsOpen(false) : setIsOpen(!isOpen);
-    document.body.style.overflow = isOpen ? '' : 'hidden';
   };
 
   const navItems = [
