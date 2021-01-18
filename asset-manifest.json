@@ -1,23 +1,28 @@
 {
   "files": {
-    "main.css": "/platform-fe/static/css/main.e18ff05d.chunk.css",
-    "main.js": "/platform-fe/static/js/main.47539093.chunk.js",
-    "main.js.map": "/platform-fe/static/js/main.47539093.chunk.js.map",
-    "runtime-main.js": "/platform-fe/static/js/runtime-main.85a36bcd.js",
-    "runtime-main.js.map": "/platform-fe/static/js/runtime-main.85a36bcd.js.map",
-    "static/js/2.3f53e004.chunk.js": "/platform-fe/static/js/2.3f53e004.chunk.js",
-    "static/js/2.3f53e004.chunk.js.map": "/platform-fe/static/js/2.3f53e004.chunk.js.map",
-    "static/js/3.1f67d5d7.chunk.js": "/platform-fe/static/js/3.1f67d5d7.chunk.js",
-    "static/js/3.1f67d5d7.chunk.js.map": "/platform-fe/static/js/3.1f67d5d7.chunk.js.map",
+    "main.css": "/platform-fe/static/css/main.77d65a6f.chunk.css",
+    "main.js": "/platform-fe/static/js/main.4d72d374.chunk.js",
+    "main.js.map": "/platform-fe/static/js/main.4d72d374.chunk.js.map",
+    "runtime-main.js": "/platform-fe/static/js/runtime-main.cdd2d1b7.js",
+    "runtime-main.js.map": "/platform-fe/static/js/runtime-main.cdd2d1b7.js.map",
+    "static/css/2.fb680e6e.chunk.css": "/platform-fe/static/css/2.fb680e6e.chunk.css",
+    "static/js/2.fe18c683.chunk.js": "/platform-fe/static/js/2.fe18c683.chunk.js",
+    "static/js/2.fe18c683.chunk.js.map": "/platform-fe/static/js/2.fe18c683.chunk.js.map",
     "index.html": "/platform-fe/index.html",
-    "static/css/main.e18ff05d.chunk.css.map": "/platform-fe/static/css/main.e18ff05d.chunk.css.map",
-    "static/js/2.3f53e004.chunk.js.LICENSE.txt": "/platform-fe/static/js/2.3f53e004.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/platform-fe/static/media/logo.6ce24c58.svg"
+    "static/css/2.fb680e6e.chunk.css.map": "/platform-fe/static/css/2.fb680e6e.chunk.css.map",
+    "static/css/main.77d65a6f.chunk.css.map": "/platform-fe/static/css/main.77d65a6f.chunk.css.map",
+    "static/js/2.fe18c683.chunk.js.LICENSE.txt": "/platform-fe/static/js/2.fe18c683.chunk.js.LICENSE.txt",
+    "static/media/global.scss": "/platform-fe/static/media/Nunito-Regular.09b2f37e.ttf",
+    "static/media/banner-bg.566bbb50.png": "/platform-fe/static/media/banner-bg.566bbb50.png",
+    "static/media/banner-img.dc1497db.png": "/platform-fe/static/media/banner-img.dc1497db.png",
+    "static/media/logo.b5150665.png": "/platform-fe/static/media/logo.b5150665.png",
+    "static/media/slider.b708c053.png": "/platform-fe/static/media/slider.b708c053.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.85a36bcd.js",
-    "static/js/2.3f53e004.chunk.js",
-    "static/css/main.e18ff05d.chunk.css",
-    "static/js/main.47539093.chunk.js"
+    "static/js/runtime-main.cdd2d1b7.js",
+    "static/css/2.fb680e6e.chunk.css",
+    "static/js/2.fe18c683.chunk.js",
+    "static/css/main.77d65a6f.chunk.css",
+    "static/js/main.4d72d374.chunk.js"
   ]
 }
