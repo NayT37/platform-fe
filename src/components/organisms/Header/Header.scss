@@ -49,24 +49,49 @@
 
 //  + Content
 .header__content {
-    visibility: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-direction: column;
-    top: $header-height;
+    position: absolute;
     right: -100%;
-    width: 85%;
-    height: 100vh;
+    top: $header-height;
+    height: calc(100vh - #{$header-height});
+    max-width: 370px;
+    width: calc(92% - 55px);
+    padding: 25px 25px 10px;
     background-color: $white;
-    box-shadow: 0 25px 34px 0 rgba(27, 20, 119, 0.1);
+    box-shadow: inset 0 5px 15px -5px rgba(27, 20, 119, 0.1);
     transition: all $transition;
+    visibility: hidden;
+    z-index: $z-side-menu;
+    .usr-profile {
+        flex-direction: row-reverse;
+        .usr-profile__arrow {
+            display: none;
+        }
+    }
+    .usr-profile__name {
+        margin: 0 0 0 12px;
+        color: $default;
+    }
 }
 .header__content__item {
-    &--search {
-        display: block;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    .plt-btn-logo__img {
+        width: 28px;
+        height: 28px;
     }
+    .plt-btn-logo__r-txt {
+        display: block;
+        margin-left: 12px;
+    }
+}
+.header__content__item__dropdown {
+    display: none;
 }
 
 //  + Toggle
@@ -109,20 +134,40 @@
     //      + Main : Active
     //  + Content
     .header__content {
-        visibility: visible;
+        align-items: center;
         flex-direction: row-reverse;
+        justify-content: flex-start;
         position: relative;
-        top: unset;
         right: unset;
-        width: auto;
+        top: unset;
         height: auto;
+        max-width: unset;
+        width: auto;
+        padding: 0;
         background-color: transparent;
         box-shadow: none;
         flex-grow: 1;
-        justify-content: flex-start;
-        transition: all $transition;
+        visibility: visible;
+        .usr-profile {
+            flex-direction: row;
+            .usr-profile__arrow {
+                display: block;
+            }
+        }
+        .usr-profile__name {
+            margin: 0 12px 0 0;
+            color: $dark-blue-title;
+        }
     }
     .header__content__item {
+        width: auto;
+        display: block;
+        justify-content: unset;
+        margin-bottom: 0;
+        .plt-btn-logo__r-txt {
+            display: none;
+            margin-left: 0;
+        }
         &--action {
             margin-right: 45px;
         }

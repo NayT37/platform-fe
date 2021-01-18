@@ -9,34 +9,21 @@
     width: 100%;
     padding: 2px;
     transition: all $transition;
-    &::after,
-    &::before {
-        content: "";
-        position: absolute;
-        opacity: 0;
-        transition: all $transition;
-    }
     &:hover {
-        &::after {
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: $black;
-            opacity: 0.05;
-            z-index: 1;
-        }
+
     }
     &--feedback {
-        &::before {
-            bottom: 0;
-            right: 0;
-            height: 13px;
-            width: 13px;
-            border-radius: 50%;
-            background-color: $blue-alt;
-            opacity: 1;
-            z-index: 3;
+        .plt-btn-logo__img {
+            &::before {
+                bottom: 0;
+                right: 0;
+                height: 13px;
+                width: 13px;
+                border-radius: 50%;
+                background-color: $blue-alt;
+                opacity: 1;
+                z-index: 3;
+            }
         }
     }
 }
@@ -54,4 +41,13 @@
         height: 100%;
         object-fit: contain;
     }
+    &::before {
+        content: "";
+        position: absolute;
+        opacity: 0;
+        transition: all $transition;
+    }
+}
+.plt-btn-logo__r-txt {
+    display: none; // Handled by other files
 }
