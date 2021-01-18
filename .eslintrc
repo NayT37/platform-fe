@@ -1,0 +1,14 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "prettier",
+        "react-app"
+    ],
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+    },
+    "rules": {
+        "no-console": "warn"
+    }
+}

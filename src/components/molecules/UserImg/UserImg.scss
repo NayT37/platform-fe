@@ -1,0 +1,23 @@
+@import "../../../global-styles/variables";
+.usr-profile {
+    display: flex;
+    align-items: center;
+}
+.usr-profile__name {
+    margin-right: 12px;
+    color: $dark-blue-alt;
+}
+.usr-profile__fig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.usr-profile__arrow {
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+}

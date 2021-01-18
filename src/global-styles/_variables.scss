@@ -1,0 +1,57 @@
+/// INDEX
+//  + Breakpoints
+//  + Colors
+//  + Fonts
+//      + Fonts : Weights
+//  + Z-index
+//  + Others
+
+//------------------------------
+//  + Breakpoints
+$breakpoint-xsm: 480px;
+$breakpoint-sm: 600px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 960px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1800px;
+$container-width: 1400px;
+
+//  + Colors
+$default: #9d9bb6;
+$blue: #0552d8;
+$blue-alt: #3d84ff;
+$orange: #fe9b00;
+$white-alt: #f5f5fb;
+$dark-blue: #1a2d7d;
+$yellow: #ffda60;
+$gray: #9c9ab5;
+$white: #ffffff;
+$black: #000000;
+$gray-bg: #f5f5fb;
+$dark-blue-alt: #3e3a6f;
+$dark-blue-bg: #005dff;
+$dark-blue-title: #103460;
+$gray-line: #e8e8ee;
+$orange-circle: #ff794f;
+$yellow-circle: #fed200;
+$gray-overlay: #c6c6cd;
+
+//  + Fonts
+$f-gilroy: "Gilroy", sans-serif;
+$f-gotham: "Gotham", sans-serif;
+$f-nunito: "Nunito", sans-serif;
+//      + Fonts : Weights
+$w-black: 900;
+$w-bold: 600;
+$w-regular: 400;
+$w-light: 300;
+
+//  + Z-index
+$z-header: 998;
+$z-footer: $z-header;
+$z-navbar: 997;
+$z-modal: 999;
+
+//  + Others
+$header-height: 80px;
+$transition: 0.3s ease-in-out;

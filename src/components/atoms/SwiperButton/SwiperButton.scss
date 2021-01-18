@@ -1,0 +1,19 @@
+@import "../../../global-styles/variables";
+
+.swiper-btn {
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
+    background-color: $white;
+    border-radius: 5px;
+    .swiper-btn__icon {
+        transform: scaleX(-1);
+        fill: $dark-blue-alt;
+        color: $dark-blue-alt;
+    }
+    &--prev {
+        .swiper-btn__icon {
+            transform: none;
+        }
+    }
+}
