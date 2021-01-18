@@ -13,7 +13,7 @@ import notificationIcon from '../../../utils/img/icons/icon-notification.png';
 import notificationImg_1 from '../../../utils/img/recent-event.png';
 
 export const Header = () => {
-  const [isOpen, setIsOpen] = useState(false); // State for responsive menu
+  const [isOpen, setIsOpen] = useState(true); // State for responsive menu
 
   /**
    * Handle open/close side menu state.
@@ -21,7 +21,7 @@ export const Header = () => {
    */
   const handleSideMenu = (forceClose = false) => {
     forceClose === true ? setIsOpen(false) : setIsOpen(!isOpen);
-    document.body.style.overflow = isOpen ? '' : 'hidden';
+    document.body.classList.toggle('overlay', !isOpen);
   };
 
   const notificationsData = [
@@ -38,12 +38,12 @@ export const Header = () => {
           <UserImg />
         </li>
         <li className="header__content__item header__content__item--icon">
-          <ButtonLogo name="Messages">
+          <ButtonLogo name="Messages" text="Messages">
             <MessageIcon size="28px" />
           </ButtonLogo>
         </li>
         <li className="header__content__item header__content__item--icon">
-          <ButtonLogo imgSrc={notificationIcon} name="Notifications" feedback />
+          <ButtonLogo imgSrc={notificationIcon} name="Notifications" text="Notification" feedback />
           <ul className="header__content__item__dropdown">
             {notificationsData.map((noti, i) => (
               <li key={i} className="header__content__item__dropdown__item">
