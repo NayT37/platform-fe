@@ -3,17 +3,22 @@ import React, {useState} from 'react';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
+import {Alert} from '../../molecules/Alert/Alert';
 import {CircularProgressbar} from 'react-circular-progressbar';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import {Heading} from '../../atoms/Heading/Heading';
 import {LearningStatus} from '../../molecules/LearningStatus/LearningStatus';
+import {ProgessDataCard} from '../../molecules/ProgessDataCard/ProgessDataCard';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {SwiperButton} from '../../atoms/SwiperButton/SwiperButton';
 import SwiperCore, {Navigation, Pagination} from 'swiper';
 
 // Resources
 import './Home.scss';
+import accordionIcon_1 from '../../../utils/img/acc-1.png';
+import accordionIcon_2 from '../../../utils/img/acc-2.png';
+import accordionIcon_3 from '../../../utils/img/acc-3.png';
 import arrow from '../../../utils/img/arrow-down.png';
 import bannerBG from '../../../utils/img/banner-bg.png';
 import bannerImg from '../../../utils/img/banner-img.png';
@@ -21,10 +26,6 @@ import eventIcon from '../../../utils/img/recent-event.png';
 import {IoArrowForwardOutline} from 'react-icons/io5';
 import lrngIcon from '../../../utils/img/english.png';
 import swiperBG from '../../../utils/img/slider.png';
-
-import accordionIcon_1 from '../../../utils/img/acc-1.png';
-import accordionIcon_2 from '../../../utils/img/acc-2.png';
-import accordionIcon_3 from '../../../utils/img/acc-3.png';
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -40,6 +41,13 @@ export const Home = () => {
   const eventsData = [
     {icon: eventIcon, hour: '10:30AM', title: 'Webinar the basics of English'},
     {icon: eventIcon, hour: '10:30AM', title: 'Team Building Activity 🔥'},
+  ];
+  const progressInfo = [
+    {title: 'Total Webinars', number: '9'},
+    {title: 'Pending Assignments', number: '0'},
+    {title: 'Total Units', number: '5'},
+    {title: 'Total Readings', number: '14'},
+    {title: 'Total Videos', number: '5'},
   ];
 
   /**
@@ -229,10 +237,22 @@ export const Home = () => {
                 </div>
               </div>
             </Grid>
+            <Grid item xs={12} md={8} className="home__progress__row">
+              <div className="home__progress__info">
+                <div className="home__progress__info__head">
+                  <Heading className="home__progress__info__head__title home__title">Progress</Heading>
+                  <div className="home__progress__info__head__line"></div>
+                </div>
+                <div className="home__progress__info__grid">
+                  {progressInfo.map((item, i) => (
+                    <ProgessDataCard {...item} key={i} />
+                  ))}
+                </div>
+                <Alert linkTxt="Confirm your account details" text="Please confirm your email and phone number. 😰" />
+              </div>
+            </Grid>
           </Grid>
         </div>
-
-        {/* End */}
       </Container>
     </div>
   );

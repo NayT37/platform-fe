@@ -15,6 +15,20 @@
 body {
     font-family: $f-nunito;
     color: $default;
+    &.overlay {
+        position: relative;
+        overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($black, 0.3);
+            z-index: $z-overlay;
+        }
+    }
 }
 .plt-card {
     background-color: $white;

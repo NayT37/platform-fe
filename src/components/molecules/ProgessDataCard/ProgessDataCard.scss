@@ -1,0 +1,26 @@
+@import "../../../global-styles/variables";
+
+.pd-card {
+    padding: 20px 30px 20px 20px;
+    transition: all $transition;
+    &:hover {
+        color: $white;
+        background-color: $blue-btn;
+        box-shadow: 0 15px 30px 0 rgba(24, 132, 255, 0.54);
+        .pd-card__number {
+            color: $white;
+        }
+    }
+}
+.pd-card--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pd-card__title {
+    max-width: 100px;
+}
+.pd-card__number {
+    color: $dark-blue-title;
+    transition: all $transition;
+}
