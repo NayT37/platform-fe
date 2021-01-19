@@ -8,6 +8,7 @@
 //  + Activity
 //      + Activity : Accordion
 //  + Progress
+//      + Progress : Information
 //  [ Responsive ]
 
 //------------------------------
@@ -357,9 +358,41 @@
         font-size: 45px;
     }
 }
+
+//      + Progress : Information
+.home__progress__info__head {
+    @extend .home__activity__header;
+    margin: 36px 0 48px;
+}
+.home__progress__info__head__line {
+    @extend .home__activity__header__line;
+}
+.home__progress__info__grid {
+    display: grid;
+    gap: 12px 15px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 30px;
+}
+
 //------------------------------
 
 //  [ Responsive ]
+
+// 600px
+@media (min-width: $breakpoint-sm) {
+    //  + General
+    //  + Header
+    //  + Events
+    //      + Events : Recets
+    //  + Activity
+    //      + Activity : Accordion
+    //  + Progress
+    //      + Progress : Information
+    .home__progress__info__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 // 768px
 @media (min-width: $breakpoint-md) {
     //  + General
@@ -387,6 +420,10 @@
             display: block;
         }
     }
+    //      + Progress : Information
+    .home__progress__info__grid {
+        margin-bottom: 60px;
+    }
 }
 
 // 1200px
@@ -401,4 +438,9 @@
     //  + Activity
     //      + Activity : Accordion
     //  + Progress
+    //      + Progress : Information
+    .home__progress__info__grid {
+        gap: 25px 30px;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
