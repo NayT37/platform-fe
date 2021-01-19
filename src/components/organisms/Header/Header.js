@@ -13,7 +13,7 @@ import notificationIcon from '../../../utils/img/icons/icon-notification.png';
 import notificationImg_1 from '../../../utils/img/recent-event.png';
 
 export const Header = () => {
-  const [isOpen, setIsOpen] = useState(true); // State for responsive menu
+  const [isOpen, setIsOpen] = useState(false); // State for responsive menu
 
   /**
    * Handle open/close side menu state.
